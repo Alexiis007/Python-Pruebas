@@ -1,0 +1,12 @@
+<datos>
+    <personas>
+        <persona>
+            <nombre>Alexis</nombre>
+            <edad>20</edad>
+        </persona>
+        <persona>
+            <nombre>Christian</nombre>
+            <edad>18</edad>
+        </persona>
+    </personas>
+</datos>
