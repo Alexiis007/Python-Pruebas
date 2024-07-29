@@ -4,8 +4,8 @@ import configparser
 config = configparser.ConfigParser()
 
 # Configuramos la data que le pasaremos al archivo ini
-config['Navegador'] = {"chrome" : "C:\Program Files\Google\Chrome\Application\chrome.exe"}
-config['Pagina'] = {"url" : "https://www.outlook.com"}
+config['Navegador'] = {"chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"}
+config['Pagina'] = {"url": "https://www.outlook.com"}
 
 # Abrimos el archivo ini
 with open('Archivo.ini', 'w') as archivo_ini:
@@ -20,8 +20,17 @@ with open('Archivo.ini', 'w') as archivo_ini:
     principal. OJO
 ''' 
 
+# Lectura de archivos ini
+
+# Cargamos la data contenida en el archivo ini
 config.read('Archivo.ini')
 
+# Guardamos la data que queremos en una variable
+# .get('Seccion', 'Variable')
 navegadores = config.get('Navegador', 'chrome')
+paginas = config.get("Pagina", "url")
 
-print(navegadores)
+# Imprimimos la data traida
+print("Secion navegadores / Chrome: ", navegadores)
+print("Seccion Paginas / URL: ", paginas)
+
