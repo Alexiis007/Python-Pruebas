@@ -1,9 +1,11 @@
 import csv
 import os
 
-# Escritura
+# Escritura (mode="w" escribira la data pero boorando lo anterior)
+# Escritura (mode='a' escribira la data pero conservando lo contenido)
+# En el caso de "a" se agrega el newLine para que la nueva data se escriba abajo
 
-data = ['Nombres', 'Genero', "Edad"]
+data = ['nombres', 'genero', "edad"]
 
 with open('Archivo.csv', mode='a', newline='\n') as archivo_csv:
     csv_escritura = csv.writer(archivo_csv, delimiter=',')
